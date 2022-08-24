@@ -1,6 +1,4 @@
 "use strict";
-function calculateTax(income) {
-    return income * 1.19;
-}
-console.log(calculateTax(10));
+let numbers = [0, 1, 2, 3];
+let strings = ['H', 'O', 'L', 'A'];
 //# sourceMappingURL=index.js.map
