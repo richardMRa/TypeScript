@@ -158,4 +158,31 @@ function greet(name: String | null | undefined): void {
 
 }
 
-greet(null) 
+greet(null)
+greet(undefined)
+greet('Richard')
+
+//---------------------Optional Chaining---------------------
+// Null checks
+type Customer = {
+    birthday?: Date
+};
+
+function getCustomer(id: number): Customer | null | undefined {
+    return id === 0 ? null : { birthday: new Date() }
+}
+
+let customer = getCustomer(0);
+
+// Optional property access operator
+console.log(customer?.birthday?.getFullYear())
+
+// Optional element access operator
+// to check if elements on array are truthy.
+// customers?.[0]
+
+// Optional call
+// if log is referencing a function, if not it will return null
+let log: any = null;
+log?.('a')
+
