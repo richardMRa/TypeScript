@@ -15,4 +15,26 @@ function optionalParam(income, taxYear = 2022) {
 }
 console.log('optional params function', optionalParam(1200));
 console.log('optional params function', optionalParam(1200, 2021));
+let employee = {
+    id: 1,
+    name: 'Richard',
+    retire: (date) => {
+        console.log(date);
+    }
+};
+let employeeType = {
+    id: 1,
+    name: 'Richard',
+    retire: (date) => {
+        console.log(date);
+    }
+};
+function kgToLbs(weight) {
+    if (typeof weight === 'number') {
+        return weight * 2.2;
+    }
+    return parseInt(weight) * 2.2;
+}
+kgToLbs(10);
+kgToLbs('10kg');
 //# sourceMappingURL=index.js.map
