@@ -116,3 +116,46 @@ function kgToLbs(weight: number | string): number {
 
 kgToLbs(10)
 kgToLbs('10kg')
+
+//Intersection types
+//  Variables that can be both types
+
+type Draggable = {
+    drag: () => void
+};
+
+type Resizable = {
+    resize: () => void
+};
+
+type UIWidget = Draggable & Resizable;
+
+let textBox: UIWidget = {
+    drag: () => { },
+    resize: () => { }
+}
+
+//Literal Types
+//  To limit the values we can asign to a variable
+
+let quantity: 50 | 100;
+
+type Quantity = 50 | 100;
+let quantity2: Quantity;
+
+type Metric = 'cm' | 'inch'
+
+//Nullable Types
+// 
+
+function greet(name: String | null | undefined): void {
+
+    if (name) {
+        console.log('Hola', name.toUpperCase());
+    }
+
+    console.log('Hola!')
+
+}
+
+greet(null) 
