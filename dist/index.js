@@ -37,4 +37,17 @@ function kgToLbs(weight) {
 }
 kgToLbs(10);
 kgToLbs('10kg');
+let textBox = {
+    drag: () => { },
+    resize: () => { }
+};
+let quantity;
+let quantity2;
+function greet(name) {
+    if (name) {
+        console.log('Hola', name.toUpperCase());
+    }
+    console.log('Hola!');
+}
+greet(null);
 //# sourceMappingURL=index.js.map
